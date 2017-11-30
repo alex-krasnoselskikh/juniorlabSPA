@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Руб",
+    "code": "RUR",
+    "isDefault": true,
+    "isAutoConvertion": false,
+    "rateToDefault": 1
+  },
+  {
+    "name": "USD",
+    "code": "USD",
+    "isDefault": false,
+    "isAutoConvertion": true,
+    "rateToDefault": "auto"
+  },
+  {
+    "name": "EUR",
+    "code": "EUR",
+    "isDefault": false,
+    "isAutoConvertion": true,
+    "rateToDefault": "auto"
+  }
+]

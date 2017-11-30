@@ -1,0 +1,18 @@
+[
+  {
+  "ammount": 50000,
+  "currency": "rur",
+  "account": "Зарплатная карта",
+  "category": "Работа",
+  "commentary": "Начисление зарплаты",
+  "tags": ""
+  },
+  {
+    "ammount": 25000,
+    "currency": "rur",
+    "account": "Зарплатная карта",
+    "category": "Работа",
+    "commentary": "Начисление аванса",
+    "tags": ""
+    }
+]

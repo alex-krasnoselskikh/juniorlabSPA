@@ -1,0 +1,65 @@
+[
+  {
+    "date": "11/30/2017, 2:43:47 PM",
+    "ammount": 528,
+    "currency": "rur",
+    "account": "Кошелёк",
+    "category": "Обеды, перекусы",
+    "commentary": "Обед в пиццерии",
+    "tags": ""
+  },
+  {
+    "date": "11/30/2017, 3:45:47 PM",
+    "ammount": 300,
+    "currency": "rur",
+    "account": "Сбербанк",
+    "category": "Сотовая связь",
+    "commentary": "Пополнил баланс",
+    "tags": ""
+  },
+  {
+    "date": "11/30/2017, 4:10:47 PM",
+    "ammount": 800,
+    "currency": "rur",
+    "account": "Сбербанк",
+    "category": "Бензин",
+    "commentary": "Заправил 20 литров",
+    "tags": ""
+  },
+  {
+    "date": "11/29/2017, 5:10:47 PM",
+    "ammount": 3000,
+    "currency": "rur",
+    "account": "Сейф",
+    "category": "Запчасти",
+    "commentary": "Новый аккумулятор",
+    "tags": ""
+  },
+  {
+    "date": "10/29/2017, 4:20:47 PM",
+    "ammount": 2100,
+    "currency": "rur",
+    "account": "Кошелёк",
+    "category": "Еда и продукты",
+    "commentary": "Покупки в магазине",
+    "tags": ""
+  },
+  {
+    "date": "10/29/2017, 4:20:47 PM",
+    "ammount": 2100,
+    "currency": "rur",
+    "account": "Кошелёк",
+    "category": "Еда и продукты",
+    "commentary": "Покупки в магазине",
+    "tags": ""
+  },
+  {
+    "date": "10/28/2017, 2:20:47 PM",
+    "ammount": 45,
+    "currency": "rur",
+    "account": "Кошелёк",
+    "category": "Проезд",
+    "commentary": "Поездка на метро",
+    "tags": ""
+  }
+]
