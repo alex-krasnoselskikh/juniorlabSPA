@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px solid black;
+    }
+
+    .line > div {
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form">
+    <form action="">
+      <div class="line">
+        <div class="label">
+          <h3>Внести трату за $сегодня</h3>
+        </div>
+        <div class="datepicker">
+            <input type="date" name="date" id="date">
+        </div>
+      </div>
+      <div class="date-display">
+        3 декабря, воскресенье
+      </div>
+      <div class="line">
+        <input type="text" id="ammount" name="ammount" placeholder="Сумма">
+        <div id="currency-block"><select name="currency" id="currency">
+            <option value="RUR" selected>RUR</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>  
+        </select>
+        </div>
+      </div>
+      <div class="select">
+        <select name="category-selector" id=""category-selector"">
+            <option value="Другие траты" selected>Другие траты</option>
+            <option value="Сотовая связь">Сотовая связь</option>
+            <option value="Еда и продукты">Еда и продукты</option>
+        </select>
+      </div>
+      <div class="line">
+        <input type="text" id="commentary" name="commentary" placeholder="Комментарий и теги">
+        <div id="more-block"><a href="#">Ещё</a></div>
+      </div>
+      <input type="button" value="Зафиксировать трату">
+    </form>
+  </div>
+</body>
+
+</html>

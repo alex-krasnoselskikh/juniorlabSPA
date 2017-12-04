@@ -1,0 +1,78 @@
+div {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.wrapper {
+  overflow: hidden;
+  /* max-width: 85vw; */
+  background-color: #f3f3f3;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap:  10px;
+  grid-auto-rows: minmax(100px, auto);
+
+}
+
+.wrapper > div {
+  background-color: #a5c7f88c;
+}
+
+.navigation {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.links a {
+  display: block;
+  background-color: royalblue;
+}
+
+.links a:nth-child(odd) {
+  background-color: lightskyblue;
+}
+
+.links a:hover {
+  background-color: red;
+}
+
+.action-form {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.remains {
+  grid-column: 3;
+  grid-row: 1;
+  margin: 0;
+}
+
+.remains ul {
+  list-style-position: outside;
+  list-style-type: none;
+  
+}
+
+.remains ul li {
+  border-left: 2px solid green;
+  margin-top: 2px;
+}
+
+.journal {
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
+
+.expenses-control {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.accumulations-goals {
+  grid-column: 3;
+  grid-row: 3;
+}
