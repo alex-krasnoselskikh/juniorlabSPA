@@ -19,5 +19,12 @@
     "isDefault": false,
     "isAutoConvertion": true,
     "rateToDefault": "auto"
+  },
+  {
+    "name": "GBP",
+    "code": "GBP",
+    "isDefault": false,
+    "isAutoConvertion": true,
+    "rateToDefault": "auto"
   }
 ]

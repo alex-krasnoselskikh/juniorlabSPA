@@ -14,14 +14,20 @@ fetch('jsons/currencies.json')
 .catch(err => console.log(err));
 
 console.log(myCurrencies);
+
 let todayRates = [];
+let out = "";
+let i = 0 ;
 //Get actual data for our currencies
 fetch(url)
 .then(res => res.json())
 .then(data => {
   myCurrencies.forEach(element => {
-    console.log(data.Valute[element]);
+    if (data.Valute[element] !== undefined) {
+       let tmp;
+       out += `<p>${data.Valute[element]['Name']}: ${data.Valute[element]['Value'].toFixed(2)}</p> \n`;
+       document.querySelector(".daily-rates").innerHTML = out;
+    }
   });
 })
 .catch(err => console.log(err));
-
