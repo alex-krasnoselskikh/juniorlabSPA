@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Квартира",
+    "price": 2000000,
+    "currency": "RUR",
+    "collected": 100000,
+    "commentary": "Копим на квартиру"
+  },
+  {
+    "name": "Машина",
+    "price": 500000,
+    "currency": "RUR",
+    "collected": 241000,
+    "commentary": "Копим на машину"
+  },
+  {
+    "name": "Телефон",
+    "price": 15000,
+    "currency": "RUR",
+    "collected": 0,
+    "commentary": ""
+  }
+]

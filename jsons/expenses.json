@@ -2,7 +2,7 @@
   {
     "date": "11/30/2017, 2:43:47 PM",
     "ammount": 528,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Кошелёк",
     "category": "Обеды, перекусы",
     "commentary": "Обед в пиццерии",
@@ -11,7 +11,7 @@
   {
     "date": "11/30/2017, 3:45:47 PM",
     "ammount": 300,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Сбербанк",
     "category": "Сотовая связь",
     "commentary": "Пополнил баланс",
@@ -20,7 +20,7 @@
   {
     "date": "11/30/2017, 4:10:47 PM",
     "ammount": 800,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Сбербанк",
     "category": "Бензин",
     "commentary": "Заправил 20 литров",
@@ -29,7 +29,7 @@
   {
     "date": "11/29/2017, 5:10:47 PM",
     "ammount": 3000,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Сейф",
     "category": "Запчасти",
     "commentary": "Новый аккумулятор",
@@ -38,7 +38,7 @@
   {
     "date": "10/29/2017, 4:20:47 PM",
     "ammount": 2100,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Кошелёк",
     "category": "Еда и продукты",
     "commentary": "Покупки в магазине",
@@ -47,7 +47,7 @@
   {
     "date": "10/29/2017, 4:20:47 PM",
     "ammount": 2100,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Кошелёк",
     "category": "Еда и продукты",
     "commentary": "Покупки в магазине",
@@ -56,7 +56,7 @@
   {
     "date": "10/28/2017, 2:20:47 PM",
     "ammount": 45,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Кошелёк",
     "category": "Проезд",
     "commentary": "Поездка на метро",

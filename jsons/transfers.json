@@ -2,7 +2,7 @@
   {
     "date": "11/24/2017, 2:33:47 PM",
     "ammount": 3000,
-    "currency": "rur",
+    "currency": "RUR",
     "from": "Сбербанк",
     "to": "Кошелёк",
     "commentary": "Снял немного наличных"
@@ -10,7 +10,7 @@
   {
     "date": "11/24/2017, 2:33:47 PM",
     "ammount": 10000,
-    "currency": "rur",
+    "currency": "RUR",
     "from": "Сбербанк",
     "to": "Сейф",
     "commentary": "Взял немного домой"
@@ -18,7 +18,7 @@
   {
     "date": "11/24/2017, 2:33:47 PM",
     "ammount": 3000,
-    "currency": "rur",
+    "currency": "RUR",
     "from": "Сбербанк",
     "to": "Кошелёк",
     "commentary": "Снял немного наличных"
@@ -26,7 +26,7 @@
   {
     "date": "11/23/2017, 1:41:47 PM",
     "ammount": 2000,
-    "currency": "rur",
+    "currency": "RUR",
     "from": "Заплатная карта",
     "to": "Кошелёк",
     "commentary": "Снял немного наличных"

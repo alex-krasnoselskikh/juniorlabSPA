@@ -1,7 +1,7 @@
 [
   {
     "ammount": 500,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Сбербанк",
     "category": "Сотовая связь",
     "commentary": "Пополнение баланса",
@@ -9,7 +9,7 @@
   },
   {
     "ammount": 45,
-    "currency": "rur",
+    "currency": "RUR",
     "account": "Кошелёк",
     "category": "Проезд",
     "commentary": "Поездка на метро",
