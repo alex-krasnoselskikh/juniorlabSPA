@@ -24,8 +24,9 @@ fetch('/jsons/goals.json')
         font-size: 1em;
         color: ${color}; 
         white-space: nowrap;
-        marign: 0;
-        ">${progress}%</div>
+        marign: 0;">
+          ${progress}%
+        </div>
       </div>
       ${element.commentary}
     </div>`;
