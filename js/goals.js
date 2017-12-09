@@ -34,7 +34,6 @@ fetch('/jsons/goals.json')
       </div>
       ${element.commentary}
     </div>`;
- 
   });
   document.querySelector('.accumulations-goals').innerHTML = out;
 })
