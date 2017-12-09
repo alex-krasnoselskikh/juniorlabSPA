@@ -1,5 +1,6 @@
 [
   {
+    "id": 444445,
     "date": "11/23/2017, 2:33:47 PM",
     "soldAmount": 10000,
     "soldCurrency": "RUR",
@@ -10,6 +11,7 @@
     "commentary": ""
   },
   {
+    "id": 444444,
     "date": "11/15/2017, 5:11:47 PM",
     "soldAmount": 30000,
     "soldCurrency": "RUR",
