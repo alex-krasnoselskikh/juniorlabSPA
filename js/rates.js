@@ -19,7 +19,6 @@ console.log(myCurrencies);
 
 let todayRates = [];
 let out = "";
-let i = 0 ;
 //Get actual data for our currencies
 //Think about synchronous request
 fetch(url)
