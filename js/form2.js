@@ -16,6 +16,14 @@ document.querySelector("#main").innerHTML = drawTabs();
 // Load default tab
 window.addEventListener("load", function(event) {
   loadMoneyOperationComponent('test', 'Внести трату');
+  //Fetch expenses
+  fetch('../jsons/expenses.json')
+  .then((res) => res.json())
+  .then((data) =>{
+    //console.log(data);
+    let expenseGridView = new GridView(data, 'grid');
+  })
+  .catch((err) => console.log("Error: " + err));
 });
 // Change active class
 let tabs = document.querySelectorAll(".tablinks");
@@ -34,7 +42,7 @@ function loadMoneyOperationComponent(containerId, operation, expense) {
   let ammount = "";
   let dayLabel = "за сегодня";
   let today = new Date();
-  //yyyy-mm-dd
+  //yyyy-mm-dd - format for compatibility
   let dateString = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
   //console.log(dateString);
   let commentary = "";
