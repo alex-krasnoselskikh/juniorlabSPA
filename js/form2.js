@@ -3,30 +3,49 @@ function drawTabs() {
   let containerId = 'test';
   let tab = `
     <div class="tab">
-      <button class="tablinks active" onclick="loadMoneyOperationComponent('${containerId}', 'Внести трату')">Расходы</button>
-      <button class="tablinks" onclick="loadMoneyOperationComponent('${containerId}', 'Внести доход')">Доходы</button>
+      <button class="tablinks active" onclick="loadMoneyOperationForm('Внести трату', '/jsons/expenses.json')">Расходы</button>
+      <button class="tablinks" onclick="loadMoneyOperationForm('Внести доход', '/jsons/incomes.json')">Доходы</button>
       <button class="tablinks" onclick="loadTransferForm('${containerId}')">Перемещения</button>
       <button class="tablinks" onclick="loadExchangeForm('${containerId}')">Обмен валют</button>
     </div>
   `;
   return tab;
 }
-
+//Load tabs
 document.querySelector("#main").innerHTML = drawTabs();
-// Load default tab
+//Load default tab
 window.addEventListener("load", function(event) {
   loadMoneyOperationComponent('test', 'Внести трату');
   //Fetch expenses
-  fetch('../jsons/expenses.json')
+  fetch('/jsons/expenses.json')
   .then((res) => res.json())
   .then((data) =>{
-    //console.log(data);
     let expenseGridView = new GridView(data, 'grid');
+    //override method by click
+    expenseGridView.itemClick = function(item) {
+      loadMoneyOperationComponent('test','Редактировать трату', item);
+    }
   })
   .catch((err) => console.log("Error: " + err));
 });
+//Load either of first two forms
+function loadMoneyOperationForm(operation, jsonUrl) {
+  loadMoneyOperationComponent('test', operation);
+  //Fetch expenses
+  fetch(jsonUrl)
+  .then((res) => res.json())
+  .then((data) =>{
+    let expenseGridView = new GridView(data, 'grid');
+    //override method by click
+    expenseGridView.itemClick = function(item) {
+      let operationText = operation.substring(operation.indexOf(" ")+1, operation.length);
+      loadMoneyOperationComponent('test',`Редактировать ${operationText}`, item);
+    }
+  })
+  .catch((err) => console.log("Error: " + err));
+}
 
-// Change active class
+// Change active class. Purely for styling purposes
 let tabs = document.querySelectorAll(".tablinks");
 tabs.forEach(element => {
   element.addEventListener("click", function(event){
@@ -38,8 +57,8 @@ tabs.forEach(element => {
 });
 //console.log(tabs);
 
-
-function loadMoneyOperationComponent(containerId, operation, expense) {
+//Component for load expenses of incomes forms
+function loadMoneyOperationComponent(containerId, operation, item) {
   let ammount = "";
   let dayLabel = "за сегодня";
   let today = new Date();
@@ -49,25 +68,25 @@ function loadMoneyOperationComponent(containerId, operation, expense) {
   let commentary = "";
   //Works only for phrase of two words
   let buttonText = operation.substring(operation.indexOf(" ")+1, operation.length);
-  if (expense !== null && expense !== undefined) {
-    ammount = expense.ammount;
+  if (item !== null && item !== undefined) {
+    ammount = item.ammount;
     //Compare two dates without hours and so on   
     let todayDateOnly = new Date(today.getFullYear(),today.getMonth(),today.getDate());
-    let expenseDateOnly = new Date(expense.date.getFullYear(),expense.date.getMonth(),expense.date.getDate());
-    if ((todayDateOnly.toDate() -1) == expenseDateOnly) {
+    let parsedDate = new Date(item.date);
+    let itemDateOnly = new Date(parsedDate.getFullYear(),parsedDate.getMonth(),parsedDate.getDate());
+    if ((todayDateOnly -1) == itemDateOnly) {
       dayLabel = "за вчера";
     }
     // ToDo: вынести отдельное условие для вывода "в будущем"
-    if ((todayDateOnly.toDate() -1 ) < expenseDateOnly || (todayDateOnly.toDate() -1 ) > expenseDateOnly) {
+    if ((todayDateOnly -1 ) < itemDateOnly || (todayDateOnly -1 ) > itemDateOnly) {
       dayLabel = "";
     }
-    if ((todayDateOnly.toDate() +1 ) == expenseDateOnly) {
+    if ((todayDateOnly +1 ) == itemDateOnly) {
       dayLabel = "на завтра";
     }
     // Commentary
-    commentary = expense.commentary;
+    commentary = item.commentary;
   }
-
   const form = `
     <div class ="form">
       <div class="line">

@@ -3,7 +3,7 @@ class GridView  {
     if (dataSource === undefined || dataSource === null)
       throw "Invalid or empty data source";
     this.dataSource = dataSource;
-    this.selectedItem = null;
+    //this.selectedItem = null;
     this.containerId = containerId;
     this.draw();
   }
@@ -23,12 +23,13 @@ class GridView  {
     document.querySelector(`#${this.containerId}`).innerHTML = out;
     let me = this;
     this.dataSource.forEach(element => {
+      //add onclick and pass element
       document.getElementById(element.id).onclick = function() {
         me.itemClick(element);
       }
     });
   }
   itemClick(element) {
-    console.log(element);
+    throw Error("Need override this method!")
   }
 };
