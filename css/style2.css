@@ -44,3 +44,17 @@ div.tab button.active {
   text-decoration: underline;
   text-decoration-style: dashed;
 }
+
+.currencies-list {
+  border: 1px dotted black;
+  background-color: #ddd;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  position: absolute;
+  /* Needs better positioning */
+  left: 145px;
+  /* position: relative;
+  float: right;
+  top: 20px;
+  right: 20px; */
+}

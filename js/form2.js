@@ -25,6 +25,7 @@ window.addEventListener("load", function(event) {
   })
   .catch((err) => console.log("Error: " + err));
 });
+
 // Change active class
 let tabs = document.querySelectorAll(".tablinks");
 tabs.forEach(element => {
@@ -46,6 +47,7 @@ function loadMoneyOperationComponent(containerId, operation, expense) {
   let dateString = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
   //console.log(dateString);
   let commentary = "";
+  //Works only for phrase of two words
   let buttonText = operation.substring(operation.indexOf(" ")+1, operation.length);
   if (expense !== null && expense !== undefined) {
     ammount = expense.ammount;
@@ -77,7 +79,7 @@ function loadMoneyOperationComponent(containerId, operation, expense) {
         </div>
       <div class="line">
         <input type="text" id="ammount" name="ammount" placeholder="Сумма" value="${ammount}">
-        <span class="select" onclick="loadCurrencies()">Руб</span>
+        <span class="select" id="currencies-selector" onclick="loadCurrencies(this.id)">Руб</span>
       </div>
       <div class="line">
         <span class="select" onclick="loadAccounts">Сбербанк</span>
@@ -161,20 +163,6 @@ function loadExchangeForm(containerId) {
     </div>
   `;
   document.querySelector(`#${containerId}`).innerHTML = form;
-}
-
-
-function loadCurrencies() {
-  fetch('/jsons/currencies.json')
-  .then(res => res.json())
-  .then(data => {  
-    data.forEach(element => {
-      console.log(element); 
-    });
-    
-  })
-  .catch(err => console.log(err));
-   
 }
 
 //console.log(loadCurrencies() + "!");
