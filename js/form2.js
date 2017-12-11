@@ -36,7 +36,7 @@ function loadMoneyOperationForm(operation, jsonUrl) {
   .then((res) => res.json())
   .then((data) =>{
     let expenseGridView = new GridView(data, 'grid');
-    //override method by click
+    //Put object to form
     expenseGridView.itemClick = function(item) {
       let operationText = operation.substring(operation.indexOf(" ")+1, operation.length);
       loadMoneyOperationComponent('test',`Редактировать ${operationText}`, item);
@@ -101,10 +101,10 @@ function loadMoneyOperationComponent(containerId, operation, item) {
         <span class="select" id="currencies-selector" onclick="loadCurrencies(this.id)">Руб</span>
       </div>
       <div class="line">
-        <span class="select" onclick="loadAccounts">Сбербанк</span>
+        <span class="select" id="accounts-selector" onclick="loadAccounts(this.id)">Сбербанк</span>
       </div>
       <div class="line">
-          <span class="select" onclick="loadCategories()"Выберите категорию расходов</span>
+          <span class="select" id="categories-selector" onclick="loadCategories(this.id)">Выберите категорию</span>
       </div>
       <div class="line">
           <input type="text" id="commentary" name="commentary" placeholder="Комментарий и теги" value="${commentary}">

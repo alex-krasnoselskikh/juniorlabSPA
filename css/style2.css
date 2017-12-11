@@ -58,3 +58,27 @@ div.tab button.active {
   top: 20px;
   right: 20px; */
 }
+.accounts-list, .expenses-list, .incomes-list {
+  border: 1px dotted black;
+  background-color: #ddd;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  position: absolute;
+}
+
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 4px;
+}
+table tr:hover {
+  background-color: #ccc;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
