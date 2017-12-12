@@ -75,6 +75,9 @@ function loadMoneyOperationComponent(containerId, operation, item, jsonUrl) {
     if ((todayDateOnly +1 ) == itemDateOnly) {
       dayLabel = "на завтра";
     }
+    // Date
+    dateString = `${parsedDate.getFullYear()}-${parsedDate.getMonth()}-${parsedDate.getDate()}`;
+    //console.log(dateString);
     // Commentary
     commentary = item.commentary;
   }
