@@ -11,8 +11,6 @@ div.tab {
   background-color: #f1f1f1;
 }
 
-/* Style the buttons inside the tab */
-
 div.tab button {
   background-color: inherit;
   float: left;
@@ -23,13 +21,9 @@ div.tab button {
   transition: 0.3s;
 }
 
-/* Change background color of buttons on hover */
-
 div.tab button:hover {
   background-color: #ddd;
 }
-
-/* Create an active/current tablink class */
 
 div.tab button.active {
   background-color: #ccc;
@@ -39,11 +33,13 @@ div.tab button.active {
   background-color: #ccc;
 }
 
+
 .select {
   color: rgb(83, 81, 81);
   text-decoration: underline;
   text-decoration-style: dashed;
 }
+
 
 .currencies-list {
   border: 1px dotted black;
@@ -51,8 +47,8 @@ div.tab button.active {
   text-decoration: underline;
   text-decoration-style: dashed;
   position: absolute;
-  /* Needs better positioning */
   left: 145px;
+  /* Needs better positioning */
   /* position: relative;
   float: right;
   top: 20px;
@@ -65,6 +61,19 @@ div.tab button.active {
   text-decoration-style: dashed;
   position: absolute;
 }
+
+.currency-add {
+  border: 1px dotted black;
+  background-color: #ddd;
+  /*Seems to be good positioning*/
+  position: absolute;
+  top: 0;
+  left: 100%;
+
+  float: right;
+  display: block;
+}
+
 
 table, tr, td {
   border: 1px solid black;

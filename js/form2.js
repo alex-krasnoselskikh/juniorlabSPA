@@ -15,22 +15,12 @@ function drawTabs() {
 document.querySelector("#main").innerHTML = drawTabs();
 //Load default tab
 window.addEventListener("load", function(event) {
-  loadMoneyOperationComponent('test', 'Внести трату');
-  //Fetch expenses
-  fetch('/jsons/expenses.json')
-  .then((res) => res.json())
-  .then((data) =>{
-    let expenseGridView = new GridView(data, 'grid');
-    //override method by click
-    expenseGridView.itemClick = function(item) {
-      loadMoneyOperationComponent('test','Редактировать трату', item);
-    }
-  })
-  .catch((err) => console.log("Error: " + err));
+  //Double
+  loadMoneyOperationForm('Внести трату', '/jsons/expenses.json');
 });
 //Load either of first two forms
 function loadMoneyOperationForm(operation, jsonUrl) {
-  loadMoneyOperationComponent('test', operation);
+  loadMoneyOperationComponent('test', operation, null, jsonUrl);
   //Fetch expenses
   fetch(jsonUrl)
   .then((res) => res.json())
@@ -39,14 +29,15 @@ function loadMoneyOperationForm(operation, jsonUrl) {
     //Put object to form
     expenseGridView.itemClick = function(item) {
       let operationText = operation.substring(operation.indexOf(" ")+1, operation.length);
-      loadMoneyOperationComponent('test',`Редактировать ${operationText}`, item);
+      loadMoneyOperationComponent('test',`Редактировать ${operationText}`, item, jsonUrl);
+      
     }
   })
   .catch((err) => console.log("Error: " + err));
 }
 
 // Change active class. Purely for styling purposes
-let tabs = document.querySelectorAll(".tablinks");
+const tabs = document.querySelectorAll(".tablinks");
 tabs.forEach(element => {
   element.addEventListener("click", function(event){
     for (let i = 0; i < tabs.length; i++) {
@@ -58,7 +49,7 @@ tabs.forEach(element => {
 //console.log(tabs);
 
 //Component for load expenses of incomes forms
-function loadMoneyOperationComponent(containerId, operation, item) {
+function loadMoneyOperationComponent(containerId, operation, item, jsonUrl) {
   let ammount = "";
   let dayLabel = "за сегодня";
   let today = new Date();
@@ -104,11 +95,11 @@ function loadMoneyOperationComponent(containerId, operation, item) {
         <span class="select" id="accounts-selector" onclick="loadAccounts(this.id)">Сбербанк</span>
       </div>
       <div class="line">
-          <span class="select" id="categories-selector" onclick="loadCategories(this.id)">Выберите категорию</span>
+          <span class="select" id="categories-selector" onclick="loadCategories(this.id, '${jsonUrl}')">Выберите категорию</span>
       </div>
       <div class="line">
           <input type="text" id="commentary" name="commentary" placeholder="Комментарий и теги" value="${commentary}">
-          <span class="select">Ещё</span>
+          <span class="select" id="extras-selector" onclick="loadExtras(this.id)">Ещё</span>
       </div>
         <input type="button" value="Зафиксировать ${buttonText}">    
     </div>

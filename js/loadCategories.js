@@ -1,17 +1,21 @@
-function loadCategories(selectedId) {
-  fetch('/jsons/expenses-categories.json')
+function loadCategories(containerId, jsonUrl) {
+  //jsonUrl is needed for load different categories
+  const endString = "-categories.json";
+  let modifiedJsonUrl = jsonUrl.slice(0, jsonUrl.indexOf("."));
+  let className = modifiedJsonUrl.slice(modifiedJsonUrl.lastIndexOf("/") + 1, modifiedJsonUrl.length);
+  modifiedJsonUrl += endString;
+  fetch(modifiedJsonUrl)
   .then(res => res.json())
   .then(data => {
     let out = document.createElement("div");
-    out.setAttribute("class", "expenses-list");  
+    out.setAttribute("class", `${className}-list`);  
     data.forEach(element => {
-      console.log(element);
       let para = document.createElement("p");
       para.setAttribute("onclick", "setSelected()");
       let tn = document.createTextNode(element.name);
       para.appendChild(tn);
       out.appendChild(para);
-      //console.log(selectedId);
+      //console.log(containerId);
     });
     //console.log(out);
     let para = document.createElement("p");
@@ -20,8 +24,9 @@ function loadCategories(selectedId) {
     para.appendChild(tn);
     out.appendChild(para);
     //In case of appendChild() there is onclick inheritance
-    // document.querySelector(`#${selectedId}`).appendChild(out);
-    document.querySelector(`#${selectedId}`).insertAdjacentElement('beforebegin', out);
+    // document.querySelector(`#${containerId}`).appendChild(out);
+    document.querySelector(`#${containerId}`).insertAdjacentElement('afterend', out);
+
   })
   .catch(err => console.log(err))
 }

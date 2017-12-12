@@ -1,4 +1,4 @@
-function loadAccounts(selectedId) {
+function loadAccounts(containerId) {
   fetch('/jsons/accounts.json')
   .then(res => res.json())
   .then(data => {
@@ -11,17 +11,18 @@ function loadAccounts(selectedId) {
       let tn = document.createTextNode(element.name);
       para.appendChild(tn);
       out.appendChild(para);
-      //console.log(selectedId);
+      //console.log(containerId);
     });
     //console.log(out);
     let para = document.createElement("p");
     let tn = document.createTextNode("+Добавить");
+    para.setAttribute("id", "add-account-selector");
     para.setAttribute("onclick", "addNew()");
     para.appendChild(tn);
     out.appendChild(para);
     //In case of appendChild() there is onclick inheritance
-    // document.querySelector(`#${selectedId}`).appendChild(out);
-    document.querySelector(`#${selectedId}`).insertAdjacentElement('beforebegin', out);
+    // document.querySelector(`#${containerId}`).appendChild(out);
+    document.querySelector(`#${containerId}`).insertAdjacentElement('beforebegin', out);
   })
   .catch(err => console.log(err))
 }

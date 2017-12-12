@@ -10,13 +10,16 @@ class GridView  {
   draw () {
     let out = "<table>";
     this.dataSource.forEach(element => {
+      let date = new Date(element.date);
+      date = date.toLocaleString();
+      //console.log(date);
       out += `
     <tr id='${element.id}'>
       <td>${element.category}</td>
       <td>${element.commentary}</td>
       <td>${element.ammount}</td>
       <td>${element.currency}</td>
-      <td>${element.date}</td>
+      <td>${date}</td>
     </tr>`;
     });
     out += "</table>";
