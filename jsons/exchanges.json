@@ -2,7 +2,7 @@
   {
     "id": 444445,
     "date": "11/23/2017, 2:33:47 PM",
-    "soldAmount": 10000,
+    "soldAmmount": 10000,
     "soldCurrency": "RUR",
     "boughtAmmount": 166,
     "boughtCurrency": "USD",
@@ -13,7 +13,7 @@
   {
     "id": 444444,
     "date": "11/15/2017, 5:11:47 PM",
-    "soldAmount": 30000,
+    "soldAmmount": 30000,
     "soldCurrency": "RUR",
     "boughtAmmount": 428,
     "boughtCurrency": "EUR",

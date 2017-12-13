@@ -49,12 +49,12 @@ function loadExchangeComponent(containerId, operation, item, jsonUrl) {
         </div>
         <div class="line">
           Купили:
-          <input type="text" id="ammount-bought" name="ammount" placeholder="Сумма" value="${boughtAmmount}">
+          <input type="text" id="ammount-bought" name="ammount-bought" placeholder="Сумма" value="${boughtAmmount}">
           <span class="select" id="currencies-bought" onclick="loadCurrencies(this.id)">${boughtCurrency}</span>
         </div>
       <div class="line">
         Продали:
-        <input type="text" id="ammount-sold" name="ammount" placeholder="Сумма" value="${soldAmmount}">
+        <input type="text" id="ammount-sold" name="ammount-sold" placeholder="Сумма" value="${soldAmmount}">
         <span class="select" id="currencies-sold" onclick="loadCurrencies(this.id)">${soldCurrency}</span>
       </div>
       <div class="line">

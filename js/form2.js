@@ -29,7 +29,6 @@ function drawTabs() {
   return tab;
 }
 
-
 //Load either of first two forms
 function loadMoneyOperationForm(operation, jsonUrl) {
   loadMoneyOperationComponent('test', operation, null, jsonUrl);
@@ -53,9 +52,9 @@ function loadTransferForm(operation, jsonUrl) {
   fetch(jsonUrl)
   .then((res) => res.json())
   .then((data) =>{
-    let moneyOperationGridView = new GridView(data, 'grid');
+    let transferGridView = new GridViewTransfer(data, 'grid');
     //Put object to form
-    moneyOperationGridView.itemClick = function(item) {
+    transferGridView.itemClick = function(item) {
       let operationText = operation.substring(operation.indexOf(" ")+1, operation.length);
       loadTransferComponent('test',`Редактировать ${operationText}`, item, jsonUrl);     
     }
@@ -69,9 +68,9 @@ function loadExchangeForm(operation, jsonUrl) {
   fetch(jsonUrl)
   .then((res) => res.json())
   .then((data) =>{
-    let moneyOperationGridView = new GridView(data, 'grid');
+    let exchangeGridView = new GridViewExchange(data, 'grid');
     //Put object to form
-    moneyOperationGridView.itemClick = function(item) {
+    exchangeGridView.itemClick = function(item) {
       let operationText = operation.substring(operation.indexOf(" ")+1, operation.length);
       loadExchangeComponent('test',`Редактировать ${operationText}`, item, jsonUrl);     
     }

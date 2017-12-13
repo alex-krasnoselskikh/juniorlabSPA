@@ -33,6 +33,6 @@ class GridView  {
     });
   }
   itemClick(element) {
-    throw Error("Need override this method!")
+    throw Error("Need override this method!");
   }
 };
