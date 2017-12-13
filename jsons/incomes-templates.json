@@ -1,13 +1,15 @@
 [
   {
-  "ammount": 50000,
-  "currency": "RUR",
-  "account": "Зарплатная карта",
-  "category": "Работа",
-  "commentary": "Начисление зарплаты",
-  "tags": ""
+    "ammount": 50000,
+    "name": "Зарплата",  
+    "account": "Зарплатная карта",
+    "currency": "RUR",
+    "commentary": "Начисление зарплаты",
+    "category": "Работа",
+    "tags": ""
   },
   {
+    "name": "Аванс",
     "ammount": 25000,
     "currency": "RUR",
     "account": "Зарплатная карта",

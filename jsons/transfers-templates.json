@@ -1,0 +1,10 @@
+[
+  {
+    "name": "В сейф",
+    "ammount": 10000,
+    "currency": "RUR",
+    "from": "Сбербанк",
+    "to": "Сейф",
+    "commentary": ""
+  }
+]

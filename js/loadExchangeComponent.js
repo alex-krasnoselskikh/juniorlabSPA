@@ -63,7 +63,7 @@ function loadExchangeComponent(containerId, operation, item, jsonUrl) {
       </div>
       <div class="line">
           <input type="text" id="commentary" name="commentary" placeholder="Комментарий и теги"value="${commentary}">
-          <span class="select" onclick="loadExtras(this.id, '${jsonUrl}')">Ещё</span>
+          <span class="select" id="exchanges-extras" onclick="loadExtras(this.id, '${jsonUrl}')">Ещё</span>
       </div>
         <input type="button" value="Зафиксировать обмен">    
     </div>

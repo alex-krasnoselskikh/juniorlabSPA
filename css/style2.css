@@ -35,7 +35,7 @@ div.tab button.active {
 
 
 .select {
-  color: rgb(83, 81, 81);
+  color: #535151;
   text-decoration: underline;
   text-decoration-style: dashed;
 }
@@ -54,12 +54,29 @@ div.tab button.active {
   top: 20px;
   right: 20px; */
 }
-.accounts-list, .expenses-list, .incomes-list {
+.accounts-list, .expenses-list, .incomes-list,
+ .transfers-list, .exchanges-list, .tag-list, #extras {
   border: 1px dotted black;
   background-color: #ddd;
   text-decoration: underline;
   text-decoration-style: dashed;
   position: absolute;
+  left: 145px;
+}
+
+.tag-list {
+  float: right;
+}
+
+#extras {
+  display: flex;
+  padding: 5px;
+}
+
+#extras > div {
+  border: 1px solid black;
+  margin: 5px;
+  background-color: #ccc;
 }
 
 .currency-add {

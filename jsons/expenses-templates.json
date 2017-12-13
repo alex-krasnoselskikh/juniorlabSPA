@@ -1,5 +1,6 @@
 [
   {
+    "name": "Баланс телефона",
     "ammount": 500,
     "currency": "RUR",
     "account": "Сбербанк",
@@ -8,6 +9,7 @@
     "tags": ""
   },
   {
+    "name": "Метро",
     "ammount": 45,
     "currency": "RUR",
     "account": "Кошелёк",
