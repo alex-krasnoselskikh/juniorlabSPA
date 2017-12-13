@@ -15,7 +15,7 @@ function loadTransferComponent(containerId, operation, item, jsonUrl) {
     //Compare two dates without hours and so on   
     let todayDateOnly = new Date(today.getFullYear(),today.getMonth(),today.getDate());
     let parsedDate = new Date(item.date);
-    let itemDateOnly = new Date(parsedDate.getFullYear(),parsedDate.getMonth(),parsedDate.getDate());
+    let itemDateOnly = new Date(parsedDate.getFullYear(),parsedDate.getMonth()+1,parsedDate.getDate());
     if ((todayDateOnly -1) == itemDateOnly) {
       dayLabel = "за вчера";
     }
@@ -27,7 +27,7 @@ function loadTransferComponent(containerId, operation, item, jsonUrl) {
       dayLabel = "на завтра";
     }
     // Date
-    dateString = `${parsedDate.getFullYear()}-${parsedDate.getMonth()}-${parsedDate.getDate()}`;
+    dateString = `${parsedDate.getFullYear()}-${parsedDate.getMonth()+1}-${parsedDate.getDate()}`;
     //console.log(dateString);
     // Commentary
     commentary = item.commentary;
