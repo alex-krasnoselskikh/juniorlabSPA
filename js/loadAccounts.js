@@ -5,7 +5,7 @@ function loadAccounts(containerId) {
     let out = document.createElement("div");
     out.setAttribute("class", "accounts-list");  
     data.forEach(element => {
-      console.log(element);
+      //console.log(element);
       let para = document.createElement("p");
       para.setAttribute("onclick", "setSelected()");
       let tn = document.createTextNode(element.name);
