@@ -9,7 +9,7 @@ function loadMoneyOperationComponent(containerId, operation, item, jsonUrl) {
   let currency = "Руб";
   let category = "Выберите категорию";
   //yyyy-mm-dd - format for compatibility
-  let dateString = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+  let dateString = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
   //console.log(dateString);
   let commentary = "";
   //Works only for phrase of two words

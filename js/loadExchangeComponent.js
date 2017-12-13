@@ -8,7 +8,7 @@ function loadExchangeComponent(containerId, operation, item, jsonUrl) {
   let today = new Date();
   let commentary = "";
   //yyyy-mm-dd - format for compatibility
-  let dateString = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+  let dateString = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
   //console.log(dateString);
   //Works only for phrase of two words
   //let buttonText = operation.substring(operation.indexOf(" ")+1, operation.length);
@@ -48,12 +48,12 @@ function loadExchangeComponent(containerId, operation, item, jsonUrl) {
           <input type="date" name="date" id="date" value="${dateString}">
         </div>
         <div class="line">
-          Купили:
+          Купили:<br>
           <input type="text" id="ammount-bought" name="ammount-bought" placeholder="Сумма" value="${boughtAmmount}">
           <span class="select" id="currencies-bought" onclick="loadCurrencies(this.id)">${boughtCurrency}</span>
         </div>
       <div class="line">
-        Продали:
+        Продали:<br>
         <input type="text" id="ammount-sold" name="ammount-sold" placeholder="Сумма" value="${soldAmmount}">
         <span class="select" id="currencies-sold" onclick="loadCurrencies(this.id)">${soldCurrency}</span>
       </div>

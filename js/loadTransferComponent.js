@@ -7,7 +7,7 @@ function loadTransferComponent(containerId, operation, item, jsonUrl) {
   let commentary = "";
   let currency = "Руб";
   //yyyy-mm-dd - format for compatibility
-  let dateString = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+  let dateString = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
   //console.log(dateString);
   //Works only for phrase of two words
   //let buttonText = operation.substring(operation.indexOf(" ")+1, operation.length);
