@@ -1,4 +1,4 @@
-function loadExtras(containerId) {
+function loadExtras(containerId, jsonUrl) {
   let extrasDiv = document.createElement("div");
   extrasDiv.setAttribute("id", "extras");
   let tagsDiv = document.createElement("div");
