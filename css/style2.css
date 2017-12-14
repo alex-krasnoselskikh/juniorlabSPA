@@ -5,6 +5,71 @@ body {
   /* font-size: 0; - this will fix horizontal gaps between divs */
 }
 
+div h3 {
+  margin: 0;
+}
+
+/* .wrapper > div {
+  border: 1px solid black;
+} */
+
+.wrapper {
+  overflow: hidden;
+  max-width: 85vw;
+  background-color: #f3f3f3;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 0;
+  grid-auto-rows: minmax(40px, auto);
+}
+#nav {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#main {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#rates {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#test {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #ccc;
+}
+
+#grid {
+  grid-column: 2;
+  grid-row: 3/4;
+}
+
+#goals {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#remains {
+  grid-column: 3;
+  grid-row: 3;
+  padding-left: 10px;
+}
+
+#remains > div {
+  border: 1px solid black;
+}
+
+#nav a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
 div.tab {
   overflow: hidden;
   border: 1px solid #ccc;

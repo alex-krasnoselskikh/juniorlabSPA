@@ -20,12 +20,16 @@ function loadAccounts(containerId) {
     para.setAttribute("onclick", "addNew()");
     para.appendChild(tn);
     out.appendChild(para);
+    out.addEventListener("mouseover", clearThis);
     //In case of appendChild() there is onclick inheritance
     // document.querySelector(`#${containerId}`).appendChild(out);
     document.querySelector(`#${containerId}`).insertAdjacentElement('beforebegin', out);
+    out.focus();
+    
   })
   .catch(err => console.log(err))
 }
+
 
 function addNew() {
   console.log('added');
@@ -33,4 +37,8 @@ function addNew() {
 
 function setSelected() {
   console.log('selected');
+}
+
+function clearThis() {
+  console.log("ping");
 }
