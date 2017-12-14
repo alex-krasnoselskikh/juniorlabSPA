@@ -14,8 +14,6 @@ fetch('/jsons/accounts.json')
     let node = document.createTextNode(element.name + ":");
     para.appendChild(node);
     div.appendChild(para);
-    // console.log(para);
-    // console.log(node);
     element.funds.forEach(curr => {
       let key = Object.keys(curr);
       let val = Object.values(curr);

@@ -12,8 +12,6 @@ class GridViewTransfer {
     this.dataSource.forEach(element => {
       let date = new Date(element.date);
       date = date.toLocaleString();
-      //console.log(date);
-      //console.log(element);
       out += `
     <tr id='${element.id}'>
       <td>Из:${element.from} <br> В:${element.to}</td>

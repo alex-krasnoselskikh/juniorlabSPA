@@ -1,4 +1,4 @@
-fetch('/jsons/goals.json')
+fetch('/jsons/goals.json') 
 .then(res => res.json())
 .then(data => {
   let out = "";

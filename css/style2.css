@@ -2,16 +2,12 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
   margin: 0;
-  /* font-size: 0; - this will fix horizontal gaps between divs */
+
 }
 
 div h3 {
   margin: 0;
 }
-
-/* .wrapper > div {
-  border: 1px solid black;
-} */
 
 .wrapper {
   overflow: hidden;
@@ -124,11 +120,7 @@ input[type=button] {
   text-decoration: underline;
   text-decoration-style: dashed;
   position: absolute;
-  /* Needs better positioning */
-  /* position: relative;
-  float: right;
-  top: 20px;
-  right: 20px; */
+  
 }
 .accounts-list, .expenses-list, .incomes-list,
  .transfers-list, .exchanges-list, .tag-list, #extras {
