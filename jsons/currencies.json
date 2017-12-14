@@ -26,5 +26,12 @@
     "isDefault": false,
     "isAutoConvertion": true,
     "rateToDefault": "auto"
+  },
+  {
+    "name": "JPY",
+    "code": "JPY",
+    "isDefault": false,
+    "isAutoConvertion": true,
+    "rateToDefault": "auto"
   }
 ]

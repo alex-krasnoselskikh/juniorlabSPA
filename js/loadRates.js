@@ -18,7 +18,7 @@ fetch('jsons/currencies.json')
 console.log(myCurrencies);
 
 let todayRates = [];
-let out = "Курсы валют на сегодня: <br>";
+let out = "<h5>Курсы валют на сегодня:</h5> <br>";
 //Get actual data for our currencies
 //Think about synchronous request
 fetch(url)
