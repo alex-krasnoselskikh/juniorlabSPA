@@ -35,7 +35,7 @@ fetch('/jsons/goals.json')
       ${element.commentary}
     </div>`;
   });
-  out += `<p id="add-goal" onclick="addGoal(this.id)">+Добавить к накоплениям</p>`;
+  out += `<p id="add-goal">+Добавить к накоплениям</p>`;
   document.querySelector('#goals').innerHTML = out;
 })
 .catch(err => console.log(err));

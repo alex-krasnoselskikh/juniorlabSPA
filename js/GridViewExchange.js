@@ -8,7 +8,7 @@ class GridViewExchange {
     this.draw();
   }
   draw () {
-    let out = "<table>";
+    let out = "Кликните для редактирования <table>";
     this.dataSource.forEach(element => {
       let date = new Date(element.date);
       date = date.toLocaleString();
